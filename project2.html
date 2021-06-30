@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project second</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.wallpaper{
+			background: url('https://static-cdn4.vigbo.tech/u63420/75745/blog/5062177/4274285/section/f40a7504ac2196a2b93e31767dd9e82c.jpg');
+			/*background-repeat: no-repeat;*/
+			background-size: cover;
+			height: 850px;
+			/*background: rgba(0, 0, 0, 0.3);
+			transform-origin: left;
+			transform: skewY(5deg);
+			z-index: -1;
+			filter: blur(5px;);*/
+		}
+		.wallpaper__head{
+			display: flex;
+			justify-content: space-between;
+		}
+		.wallpaper-head__title{
+			display: flex; 
+			margin: 70px;
+		}
+		.wallpaper-head__menu{
+			display: flex;
+			margin: 60px;
+			justify-content: center;
+		}
+		.wallpaper-head-menu__log{
+			text-decoration: none;
+			color: white;
+			margin-right: 20px;
+			margin-top: 10px;
+		}
+		.wallpaper-head-menu__sign, .block4__button{
+			width: 100px;
+			height: 40px;
+			border-radius: 7px;
+			
+			margin-right: 20px;
+			line-height: 40px;
+			text-align: center;
+		}
+		.wallpaper-head-menu__sign:hover{
+			border-color: grey;
+			background-color: grey;
+		}
+		.block4__button:hover{
+			border-radius: 30px;
+		}
+		.wallpaper__block1{
+			margin-top: 70px; 
+			display: flex;
+			color: white;
+			justify-content: center;
+			font-family: Arial;
+		}
+		.wallpaper__title{
+			color: white;
+			font-size: 33px;
+			text-align: center;
+			font-family: Arial;
+			width: 680px;
+			display: flex;
+			margin-left: 380px;
+		}
+		.wallpaper__search-block{
+			justify-content: center;
+			margin-top: 40px;
+			display: flex;
+		}
+		.wallpaper-search-block__img{
+			width: 30px;
+			height: 30px;
+		}
+		.wallpaper-search-block__input{
+			height: 35px;
+			width: 450px;
+			border-radius: 5px;
+			font-size: 15px;
+			font-family: Arial;
+			background-color: #DDDDDD;
+			letter-spacing: 2px;
+			border: none;
+		}
+		.wallpaper-search-block__button{
+			height: 35px;
+			width: 120px;
+			border-radius: 5px;
+			font-size: 15px;
+			font-family: Arial;
+			background-color: red;
+			color: white;
+			border: none;
+		}
+		.wallpaper-search-block__button:hover{
+			background-color: grey;
+		}
+		
+		/*.wallpaper__shadow:before{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 50%;
+			height: 50px;
+			background: red;
+			transform-origin: right;
+			transform: skewY(-5deg);
+			z-index: -1;
+			filter: blur(10px);
+		}*/
+		.shadow{
+			height: 200px; 
+			background: linear-gradient(180deg, black, white);
+		}
+		.shadow__text1{
+			display: flex;
+			justify-content: flex-end;
+			margin-bottom: 30px;
+		}
+		.shadow__imgs{
+			display: flex;
+			justify-content: space-around;
+			height: 200px;
+		}
+		.shadow-imgs__arrow{
+			margin-top: 40px;
+			border-radius: 20px;
+			height: 40px;
+		}
+		.shadow-imgs__arrow:hover{
+			background-color: grey;
+		}
+		.shadow-imgs__camera{
+			width: 200px;
+			height: 130px;
+		}
+		.shadow-imgs__camera:hover{
+			width: 270px;
+			height: 200px;
+		}
+		.block3{
+			height: 850px;
+			background-color: #DDDDDD;
+		}
+		.block3__line{
+			width: 100px;
+			height: 3px;
+			background-color: red;
+			border-radius: 5px;
+			margin-left: 650px;
+			margin-top: 100px;
+		}
+		.block3__title, .block4__title{
+			text-align: center; 
+			padding-top: 30px; 
+			font-family: Arial
+		}
+		.block3__types{
+			display: flex;
+			justify-content: center;   /*...*/
+			margin-top: 50px;
+		}
+		.block3-types__box1{
+			width: 200px;
+			height: 300px;
+			background-color: white;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		.block3-types__box1:hover{
+			box-shadow: -30px, 30px, 20px black;
+			width: 210px;
+			height: 310px;
+		}
+		.block3__box1{
+			width: 120px;
+			height: 100px;
+			margin-top: 23px;
+			margin-left: 35px;
+			margin-bottom: 10px;
+		}
+		.block3__box1:hover{
+			width: 130px;
+			height: 110px;
+			margin-top: 33px;
+			margin-left: 45px;
+			margin-bottom: 20px;
+		}
+		.block3-box1__flex{
+			display: flex; 
+			justify-content: center;
+		}
+		.block3-box1__button{
+			width: 70px;
+			height: 20px;
+			background-color: #E5B299;
+			border-radius: 10px;
+			margin: 5px;
+		}
+		.block4{
+			background: url('https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492179366/articles/2015/07/12/the-opening-night-of-studio-54-was-exactly-the-hedonistic-riot-you-d-expect/150710-hayden-guest-studio-54-tease_pbsrsu');
+			/*background-repeat: no-repeat;*/
+			background-size: cover;
+			height: 850px;
+		}
+		.block4__filter{
+			display: flex;
+			justify-content: center;
+			margin-top: 20px;
+		}
+		.block4-filter__box1, .block4-filter__box2{
+			width: 600px;
+			height: 270px;
+			background-color: #DDDDDD;
+			border-radius: 10px;
+			box-shadow: 1px, 1px, 4px rgba(14, 14, 14, 0.3);
+			border: 5px solid rgba(255, 255, 255, 0.15); 
+			/*background: inherit;*/
+		}
+		/*.block4-filter__box1:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: inherit;
+			filter: blur(10px);
+		}*/
+		.filter__block1, .filter__block2{
+			margin: 50px;
+			line-height: 30px;
+		}
+		.block4__filter2{
+			height: 200px;
+			background-color: #DDDDDD;
+			margin-top: 70px;
+			display: flex;
+			border-radius: 10px;
+			width: 1000px;
+			justify-content: space-around;
+			align-items: center;
+			margin-left: 200px;
+		}
+		.block5, .block6{
+			display: flex;
+			justify-content: center;
+			height: 200px;
+			margin-top: 30px;
+		}
+		.block5__box1{
+			background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf05Od2Af34kgjc6Jx48FJMHa93uTfPW-0jg&usqp=CAU');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		.block5__box1:hover, .block5__box2:hover, .block5__box3:hover, .block5__box4:hover, .block5__box5:hover{
+			width: 250px;
+			height: 250px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		.block5__box2{
+			background: url('https://grovewatch.com/wp-content/uploads/2021/02/twisi.jpeg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		
+		.block5__box3{
+			background: url('https://images.unsplash.com/photo-1520390138845-fd2d229dd553?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		.block5__box4{
+			background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRkdg02lho26mAu9BahxCPdbdTJrd1wVUOaQPotQYZjzc5k3RMBNhB8gOvSL7Jn1AvU6E&usqp=CAU');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		
+		.block5__box5{
+			background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB7Vz2IPTLYxpGtFC8XPD8xa472Go4Tayd7IFzKE2qPiJz7rAC6SxxlYMOMw_sK119ev0&usqp=CAU');
+			background-size: cover;
+			background-repeat: no-repeat;
+			width: 200px;
+			height: 200px;
+			border-radius: 10px;
+			margin: 10px;
+		}
+		.block6{
+			margin-bottom: 100px;
+		}
+		.block6__elem1, .block7__elem1, .block8__elem1{
+			width: 300px;
+			height: 200px;
+			border-radius: 10px;
+			box-shadow:  0px 30px 30px rgb(0, 0, 0, 0.3);
+			padding: 10px;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wallpaper">
+		<div class="wallpaper__head">
+			<div class="wallpaper-head__title">
+				<h2 style="color: red;">KIT</h2><h2 style="color: white;">. STUDIO</h2>
+			</div>
+			<div class="wallpaper-head__menu">
+				<a href="" class="wallpaper-head-menu__log">Login</a>
+				<div class="wallpaper-head-menu__sign">
+					<a href="" style="text-decoration: none; color: white; ">Sigh up</a>
+				</div>
+				<img src="https://iskra-rzn.ru/img/icon_menu.png" style="width: 30px; height: 30px; margin-top: 5px;">
+			</div>
+		</div>
+		<strong class="wallpaper__block1">welcome to <span style="color: red;"> kit</span>.studio</strong>
+		<div class="wallpaper__title">
+			<h1>Your local camera kit sharing <span style="color: red;"> community</span></h1>
+		</div>
+		<div class="wallpaper__search-block">
+			<div style="background-color: #DDDDDD; width: 35px; height: 35px; border-radius: 5px;">
+				<a href=""><img src="http://download.seaicons.com/download/i93730/custom-icon-design/silky-line-user/custom-icon-design-silky-line-user-searchuser-3.ico" class="wallpaper-search-block__img"></a>
+			</div>
+			<input type="text" name="search" class="wallpaper-search-block__input" placeholder=" Sony A7Siii...">	
+			<input type="submit" class="wallpaper-search-block__button" value="Search Kit">
+		</div>
+	</div>
+	<div class="shadow">
+		<div class="shadow__text1">
+			<p style="color: white; margin-top: 20px; font-family: Arial; font-size: 13px;"> View all categories</p>
+			<img src="https://www.pngrepo.com/download/171025/arrow-point-hand-drawn-outline-pointing-to-right-direction.png" style="width: 20px; height: 20px; margin-top: 20px; margin-left: 10px; margin-right: 10px;">
+		</div>
+		<div class="shadow__imgs">
+			<div class="shadow-imgs__arrow">
+				<a href=""><img src="https://www.pngrepo.com/download/171025/arrow-point-hand-drawn-outline-pointing-to-right-direction.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 10px; margin-right: 10px;"></a>
+			</div>
+			<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="shadow-imgs__camera">
+			<img src="https://i.dlpng.com/static/png/6976587_preview.png" class="shadow-imgs__camera">
+			<img src="https://www.remtelevid.ru/images/foto/canon-7d.png" class="shadow-imgs__camera">
+			<img src="https://lh3.googleusercontent.com/proxy/7UZcK2xLpyPDwIfqKwvUzja4y12V4ao9SgrIgHDfhlA_XvGBQcjMYk9GbLKfbfoLD2M0s4NadN1_srGExFexa5oZP7wKud2OArduivRblPFS493j-UejDg_0r8YTGz66HbICjALpoKEaKkxruSWJzOl6GRa5soqIkVAQD9iCeoHK"  class="shadow-imgs__camera">
+			<img src="https://lh3.googleusercontent.com/proxy/CFxJi33mk14fEodikmkiy5V-gnAStyQmOopfWvGWJEgJ0wjUXk4ttqseT78_DF99uJEgmU38xEzUA943DwwryVMRp_DPA2HQfiic-YQ8Mobxiw"  class="shadow-imgs__camera">
+			<div class="shadow-imgs__arrow">
+				<a href=""><img src="https://www.pngrepo.com/download/171025/arrow-point-hand-drawn-outline-pointing-to-right-direction.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 10px; margin-right: 10px;"></a>
+			</div>
+		</div>
+	</div>
+	<div class="block3">
+		<div class="block3__line"></div>
+		<h1 class="block3__title">Newly Listed for rent</h1>
+		<div class="block3__types">
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+		<div class="block3__types">
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="block3-types__box1">
+				<img src="https://freepngimg.com/thumb/video%20camera/35-video-camera-png-image.png" class="block3__box1">
+				<div style=" height: 200px;">
+					<div class="block3-box1__flex">
+						<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRx369hhf8QjqgrentfusiTtkXgRIzEdsntSMkXE-6BdZHW-8Up3fVo3pg-ggKN_LzHo1E&usqp=CAU" style="border-radius: 30px; width: 30px; height: 30px;">
+						<p style="color: grey; font-size: 10px; margin-top: 10px;">Michael B.Jorden</p>
+						<div class="block3-box1__button">
+							<a href="" style="text-decoration: none;  font-size: 8px; padding-left: 6px;">SPECIAL HOME</a>
+						</div>
+					</div>
+					<div class="block3-box1__flex" style="justify-content: flex-start; margin-left: 13px; margin-top: 5px;">
+						<img src="https://purepng.com/public/uploads/large/purepng.com-grey-starstargeometricallydecagonconcavestardomclipartblackgrey-1421526502793oblca.png" style="width: 15px; height: 15px;">
+						<p style="font-size: 12px; padding: 3px; color: grey;">0|100%</p>
+					</div>
+					<h4 style="margin-left: 13px; margin-top: 10px">Canon CN-3E 30-105mm T2.8 PL mount</h4>
+					<div class="block3-box1__flex" style="justify-content: flex-start;">
+						<h2 style="margin: 13px;">45$</h2>
+						<p style="color: grey; font-size: 10px; margin-top: 20px;">day/wknd</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+	</div>
+	<div class="block4">
+		<h1 class="block4__title" style="color: white;">How It Works</h1>
+		<div class="block4__filter">
+			<div class="block4-filter__box1">
+				<div class="filter__block1">
+					<h1 style="margin-bottom: 20px;">EARN MONEY</h1>
+					<p>+ Lend to trused filmmakers</p>
+					<p>+ Put your kit to use making money</p>
+					<p>+ Add a new revenue stream to your income</p>
+				</div>
+			</div>
+
+			<div class="block4-filter__box2" style="background-color: #F6E5E9;">
+				<div class="filter__block2">
+					<h1 style="margin-bottom: 20px;">EARN MONEY</h1>
+					<p>+ Lend to trused filmmakers</p>
+					<p>+ Put your kit to use making money</p>
+					<p>+ Add a new revenue stream to your income</p>
+				</div>
+			</div>
+		</div>
+		<div class="block4__filter2">
+			<div style="width: 250px;">
+				<h3>Lender Guarantee</h3>
+				<p>Resst assured that you and your kit will always be protected by our Lender Guarantee</p>
+			</div>
+			<div style="width: 250px;">
+				<h3>Lender Guarantee</h3>
+				<p>Resst assured that you and your kit will always be protected by our Lender Guarantee</p>
+			</div>
+			<div style="width: 250px;">
+				<h3>Lender Guarantee</h3>
+				<p>Resst assured that you and your kit will always be protected by our Lender Guarantee</p>
+			</div>
+		</div>
+		<div class="block4__button" style="width: 200px; background-color: red; margin-top: 70px; margin-left: 600px;">
+			<a href="" style="text-decoration: none; color: white;">Sigh Up</a>
+		</div>
+	</div>
+	<h1 class="block4__title">Popular Kit</h1>
+	<div class="block5">
+		<div class="block5__box1">
+			<h4 style="margin-top: 150px; margin-left: 10px; color: white;">Red Komodo 6K</h4>
+			<p style="margin-left: 10px; color: white;">From 23$/day</p>
+		</div>
+		<div class="block5__box2">
+			<h4 style="margin-top: 150px; margin-left: 10px; color: white;">DJI Ronin RS2</h4>
+			<p style="margin-left: 10px; color: white;">from 30$/day</p>
+		</div>
+		<div class="block5__box3">
+			<h4 style="margin-top: 150px; margin-left: 10px; color: white;">Red Komodo 6K</h4>
+			<p style="margin-left: 10px; color: white;">From 23$/day</p>
+		</div>
+		<div class="block5__box4">
+			<h4 style="margin-top: 150px; margin-left: 10px; color: white;">DJI Ronin RS2</h4>
+			<p style="margin-left: 10px; color: white;">from 30$/day</p>
+		</div>
+		<div class="block5__box5">
+			<h4 style="margin-top: 150px; margin-left: 10px; color: white;">DJI Ronin RS2</h4>
+			<p style="margin-left: 10px; color: white;">from 30$/day</p>
+		</div>
+	</div>
+	<div class="block3__line"></div>
+	<h1 class="block3__title">Testimonials</h1>
+	<div class="block6">
+		<div class="shadow-imgs__arrow">
+			<a href=""><img src="https://www.pngrepo.com/download/171025/arrow-point-hand-drawn-outline-pointing-to-right-direction.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 10px; margin-right: 10px;"></a>
+		</div>
+
+		<div class="block6__elem1">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<p style="margin-top: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div style="display: flex; margin-top: 20px;">
+				<img src="https://miro.medium.com/max/1400/1*CetgKOTP_2sdDO2M6njiOQ.jpeg" style="border-radius: 30px; width: 30px; height: 30px;">
+				<div>
+					<p>Alvie Kalina</p>
+					<p  style="color: grey; font-size: 10px;">PHOTOGRAPHER</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="block7__elem1">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<p style="margin-top: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div style="display: flex; margin-top: 20px;">
+				<img src="https://miro.medium.com/max/1400/1*CetgKOTP_2sdDO2M6njiOQ.jpeg" style="border-radius: 30px; width: 30px; height: 30px;">
+				<div>
+					<p>Alvie Kalina</p>
+					<p  style="color: grey; font-size: 10px;">PHOTOGRAPHER</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="block7__elem1">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<img src="https://winx-fan.ru/800/600/https/img.flaticon.com/icons/png/512/13/13595.png" style="width: 20px; height: 20px;">
+			<p style="margin-top: 10px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			<div style="display: flex; margin-top: 20px;">
+				<img src="https://miro.medium.com/max/1400/1*CetgKOTP_2sdDO2M6njiOQ.jpeg" style="border-radius: 30px; width: 30px; height: 30px;">
+				<div>
+					<p>Alvie Kalina</p>
+					<p  style="color: grey; font-size: 10px;">PHOTOGRAPHER</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="shadow-imgs__arrow">
+			<a href=""><img src="https://www.pngrepo.com/download/171025/arrow-point-hand-drawn-outline-pointing-to-right-direction.png" style="width: 20px; height: 20px; margin-top: 10px; margin-left: 10px; margin-right: 10px;"></a>
+		</div>
+	</div>
+</body>
+</html>
