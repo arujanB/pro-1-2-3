@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project first</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.block{
+			height: 550px;
+			background: linear-gradient(135deg, #325288, #C0FEFC);
+			
+		}
+		.block__elem1{
+			display: flex;
+			justify-content: space-between;
+		}
+		.block__elem2{
+			color: white;
+			margin: 30px;
+			margin-left: 130px;
+			font-family: Arial, sans-serif;
+		}
+		.block__elem3{
+			margin: 30px;
+			margin-right: 100px;
+			/*background-color: red;*/
+		}
+		.block-elem3__search{
+			height: 23px;
+			width: 23px;
+		}
+		.block-elem3__menu{
+			height: 23px;
+			width: 23px;
+			margin-left: 10px;
+		}
+		.block__elem4{
+			display: flex;
+		}
+		.block-elem4__text{
+			width: 320px;
+			margin-left: 130px;
+			margin-top: 70px;
+			font-family: Arial, sans-serif;
+		}
+		.block-elem4__title{
+			color: white;
+			text-align: left;
+			font-size: 50px;
+			font-family: Arial, sans-serif;
+		}
+		.block-elem4__para{
+			color: white;
+			margin-top: 20px;
+		}
+		.block-elem4__buttons{
+			display: flex;
+			margin-top: 40px;
+		}
+		.block-elem4__button1{
+			width: 110px;
+			height: 35px;
+			border: 1px solid white;
+			font-size: 11px;
+			text-align: center;
+		}
+		.block-elem4__button1:hover{
+			border-color: black;
+			background-color: black;
+		}
+		.block-elem4-button1__button1{
+			text-decoration: none;
+			color: white;
+			line-height: 35px;
+			font-family: Arial, sans-serif;
+		}
+		.block-elem4__button2{
+			width: 110px;
+			height: 35px;
+			border: 1px solid white;
+			font-size: 11px;
+			text-align: center;
+			margin-left: 40px;
+		}
+		.block-elem4__button2:hover{
+			background-color: black;
+			border-color: black;
+		}
+		.block-elem4-button2__button2{
+			text-decoration: none;
+			color: white;
+			line-height: 35px;
+			font-family: Arial, sans-serif;
+		}
+		.header__img{
+			margin-left: 220px;
+			margin-top: 50px;
+		}
+		.block-elem4__mainImg{
+			margin-top: 130px;
+			margin-left: 300px;
+			width: 700px;
+			height: 400px;
+		}
+		.block2{
+			height: 700px;
+			background-color: ;
+			display: flex;
+		}
+		.block2__elem5{
+			height: 700px;
+			width: 70px;
+			background-color: #C0FEFC;
+		}
+		.block2__elem6{
+			display: flex;
+			margin-top: 170px;
+			margin-left: 100px;
+		}
+		.block2-elem6__text{
+			width: 300px;
+			font-family: Arial, sans-serif;
+		}
+		.block2-elem6__box1{
+			width: 250px;
+			height: 250px;
+			margin-left: 150px;
+			font-family: Arial, sans-serif;
+			background-color: #DEEDF0;
+			border-radius: 2px;
+		}
+		.block2-elem6-box1__img{
+			width: 100px;
+			height: 70px;
+			margin-left: 72px;
+			margin-top: 63px;
+		}
+		.block2-elem6__box2{
+			width: 250px;
+			height: 250px;
+			border-radius: 2px;
+			font-family: Arial, sans-serif;
+			border-radius: 2px;
+			margin-left: 30px;
+			box-shadow: 0px 30px 30px rgb(0, 0, 0, 0.3);
+		}
+		.block2-elem6-box2__img{
+			width: 90px;
+			height: 90px;
+			margin-left: 75px;
+			margin-top: 55px;
+		}
+
+
+
+		.block2__elem7{
+			display: flex;
+			height: 200px;
+			margin-top: 430px;
+			margin-left: -790px;
+		}
+		.block2-elem7__box1{
+			width: 250px;
+			height: 250px;
+			border-radius: 2px;
+			font-family: Arial, sans-serif;
+			/*margin-top: 250px;*/
+			border-radius: 2px;
+			/*box-shadow: 0px 30px 30px rgb(0, 0, 0, 0.3);*/
+			background-color: #DEEDF0;
+		}
+		.block2-elem7-box1__img{
+			width: 90px;
+			height: 90px;
+			margin-left: 75px;
+			margin-top: 55px;
+		}
+		.block2-elem7__box2{
+			width: 250px;
+			height: 250px;
+			border-radius: 2px;
+			font-family: Arial, sans-serif;
+			/*margin-top: 250px;*/
+			margin-left: 20px;
+			border-radius: 2px;
+			box-shadow: 0px 30px 30px rgb(0, 0, 0, 0.3);
+		}
+		.block2-elem7-box2__img{
+			width: 90px;
+			height: 90px;
+			margin-left: 75px;
+			margin-top: 55px;
+		}
+		.block2-elem7__box3{
+			width: 250px;
+			height: 250px;
+			border-radius: 2px;
+			font-family: Arial, sans-serif;
+			/*margin-top: 250px;*/
+			margin-left: 20px;
+			border-radius: 2px;
+			/*box-shadow: 0px 30px 30px rgb(0, 0, 0, 0.3);*/
+			background-color: #DEEDF0;
+		}
+		.block2-elem7-box3__img{
+			width: 90px;
+			height: 90px;
+			margin-left: 75px;
+			margin-top: 55px;
+		}
+
+
+		.block3{
+			text-align: center;
+			margin-top: 100px;
+			font-family: Arial, sans-serif;
+		}
+		.block4{
+			text-align: center;
+			margin-top: 50px;
+		}
+		.block5{
+			display: flex;
+			justify-content: center;
+		}
+		.block5__photos{
+			width: 250px;
+			height: 150px;
+			margin: 60px;
+		}
+		.block6{
+			text-align: center;
+			font-family: Arial, sans-serif;
+		}
+		.block6__button{
+			width: 110px;
+			height: 35px;
+			border: 1px solid #233E8B;
+			font-size: 11px;
+			margin-left: 650px;
+			background-color: #233E8B;
+		}
+		.block6__button:hover{
+			border-color: black;
+			background-color: black;
+		}
+		.block6-button__last{
+			text-decoration: none;
+			color: white;
+			line-height: 35px;
+			font-family: Arial, sans-serif;
+		}
+		.block7{
+			background-color: #DEEDF0;
+		}
+		.block7__bottom1{
+			display: flex;
+			justify-content: space-around;
+			margin-top: 50px;
+			padding: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class="block">
+		<div class="block__elem1">
+			<p class="block__elem2"><strong>Fundo</strong> </p>	
+			<div class="block__elem3">
+				<img src="https://cdn3.iconfinder.com/data/icons/search-engine-optimization-seo-3/320/loupe_magnifier_magnifying_search-512.png" class="block-elem3__search">
+				<img src="https://img.icons8.com/carbon-copy/2x/menu.png" class="block-elem3__menu">
+			</div>
+		</div>
+		<div class="block__elem4">
+			<div class="block-elem4__text">
+				<h1 class="block-elem4__title">We`ll build house of your Dream</h1>
+				<p class="block-elem4__para">We have 5000+ Review and out customers trust on your property and Quality products.</p>
+				<div class="block-elem4__buttons">
+					<div class="block-elem4__button1">
+						<a href="" class="block-elem4-button1__button1">Buy Now</a>
+					</div>
+					<div class="block-elem4__button2">
+						<a href="" class="block-elem4-button2__button2">Explore</a>
+					</div>
+				</div>
+			</div>
+			<img src="https://kavcomment.ru/wp-content/uploads/2020/08/b6bd6e28df238f5612bb774ef2bd3b0d.png" class="header__img">
+		</div>
+	</div>
+	<div class="block2">
+		<div class="block2__elem5"></div>
+		<div class="block2__elem6">
+			<div class="block2-elem6__text">
+				<h1>What we are offering</h1>
+				<p style="margin-top: 20px; margin-bottom: 15px;">Property facilities</p>
+				<p style="color: grey;">We have 5000+ Reviews and our customers trust on our Quality product and trust own our product.</p>
+			</div>
+			<div class="block2-elem6__box1">
+				<img src="http://cdn.onlinewebfonts.com/svg/img_557766.png" class="block2-elem6-box1__img">
+				<p style="margin-left: 105px; margin-top: 23px;">Gym</p>
+			</div>
+			<div class="block2-elem6__box2">
+				<img src="https://www.pngarts.com/files/6/Car-Parking-PNG-Image-Background.png" class="block2-elem6-box2__img">
+				<p style="margin-left: 100px; margin-top: 15px;">Parking</p>
+			</div>
+		</div>
+		<div class="block2__elem7">
+			<div class="block2-elem7__box1">
+				<img src="https://image.flaticon.com/icons/png/512/258/258101.png" class="block2-elem7-box1__img">
+				<p style="margin-left: 90px; margin-top: 23px;">Fireplace</p>
+			</div>
+			<div class="block2-elem7__box2">
+				<img src="https://image.flaticon.com/icons/png/512/143/143078.png" class="block2-elem7-box2__img">
+				<p style="margin-left: 70px; margin-top: 15px;">Swimming pool</p>
+			</div>
+			<div class="block2-elem7__box3">
+				<img src="https://image.flaticon.com/icons/png/512/246/246507.png" class="block2-elem7-box3__img">
+				<p style="margin-left: 93px; margin-top: 15px;">Internet</p>
+			</div>
+		</div>
+	</div>
+	<div class="block3">
+		<h1>Plans and dimensions</h1>
+		<p style="font-size: 20px; margin-top: 15px; margin-bottom: 20px;">Rooms Gallery</p>
+		<p style="width: 280px; color: grey; margin-left: 580px;">We have 5000+ Reviews and our Customers trust our Quality product and trust own our product. If you order More than.</p>
+	</div>
+	<div class="block4">
+		<img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aG9tZSUyMGludGVyaW9yfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80">
+	</div>
+	<div class="block5">
+		<img src="https://www.onekeymls.com/content/uploads/2019/10/Spacious-living-room-with-traditional-fireplace.jpg" class="block5__photos">
+		<img src="https://www.onekeymls.com/content/uploads/2020/05/modern-livingroom.jpg" class="block5__photos">
+		<img src="https://www.onekeymls.com/content/uploads/2019/10/Spacious-living-room-with-light-gray-walls.jpg" class="block5__photos">
+	</div>
+	<div class="block6">
+		<h1>Interesting to buy property</h1>
+		<p style="width: 500px; color: grey; margin-left: 480px; margin-top: 30px; margin-bottom: 30px;">If you intersting to buy property please contuct us we will call you Shortly to fullfill you requirments and property.</p>
+		<div class="block6__button">
+			<a href="" class="block6-button__last">Get in touch</a>
+		</div>
+	</div>
+	<div class="block7">
+		<div class="block7__bottom1">
+			<div>
+				<h1>Sevices</h1>
+				<p style="margin-top: 30px; margin-bottom: 20px;">Reparting</p>
+				<p>Get in Touch</p>
+				<p style="margin-top: 20px; margin-bottom: 20px;">Managment</p>
+			</div>
+			<div>
+				<h1>Our Company</h1>
+				<p style="margin-top: 30px; margin-bottom: 20px;">Reparting</p>
+				<p>Get in Touch</p>
+				<p style="margin-top: 20px; margin-bottom: 20px;">Managment</p>
+			</div>
+			<div>
+				<h1>Address</h1>
+				<p style="margin-top: 30px; margin-bottom: 10px;">121 King St,</p>
+				<p>Vic 3000, US</p>
+				<p style="margin-top: 20px; margin-bottom: 20px;">888-123-42278</p>
+				<p>info@example.com</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
