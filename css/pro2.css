@@ -1,0 +1,240 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+}
+
+hr{
+	opacity: 0.3;
+	margin-top: 70px;
+}
+
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.container{
+	max-width: 1100px;
+	width: 100%;
+	padding: 0 15px;
+	/*background-color: pink;*/
+	margin: 0 auto;
+}
+
+.menu{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 20px;
+}
+
+.logo{
+	font-size: 40px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.icon{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #fff;
+	text-align: center;
+}
+
+.icon__img{
+	width: 25px;height: 25px;
+	margin-top: 2px;
+}
+
+.wallpaper{
+	background-image: url('https://cdnoboi3d-a.akamaihd.net/image/cache/data/oboi-v-rulonah/WR-78866B-5-840x480x.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 200px 0 0 0;
+	min-height: 650px;
+}
+
+.wallpaper__body{
+	width: 600px;
+}
+
+.title{
+	font-size: 60px;
+	font-weight: 700;
+	color: #fff;
+}
+
+.wallpaper__para{
+	font-size: 15px;
+	color: lightgrey;
+	/*margin-bottom: 40px;*/
+}
+
+.btn{
+	display: flex;
+	align-items: center;
+}
+
+.btn__arrow{
+	width: 15px;
+	height: 15px;
+	color: ;
+}
+
+.btn__link{
+	color: lightgrey;
+	font-weight: 700;
+	font-size: 16px;
+	padding-left: 5px;
+}
+
+.btn__link:hover{
+	color: yellow; 
+}
+
+.products{
+	/*background-color: red;*/
+}
+
+.products__title{
+	font-size: 20px;
+	width: 500px;
+	color: #464F41;
+}
+
+.products__list{
+	display: flex;
+	justify-content: space-between;
+}
+
+.products__item{
+	width: 160px;
+	display: flex;
+	flex-direction: column;
+}
+
+/*.products__item:hover{
+	background-color: lightgrey;
+}*/
+
+.products__suptitle{
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #464F41;
+	margin-bottom: 50px;
+}
+
+.products__text{
+	height: 150px;
+}
+
+/*.products-btn{
+	margin-bottom: 0px;
+	margin-top: auto;
+}*/
+
+.quote{
+	background-color: #F8F5F1;
+	max-width: 1000px;
+	position: relative;
+	top: 180px;
+	box-shadow: 50px 180px 100px rgba(0, 0, 0, 0.145947);
+}
+
+.quote__text{
+	padding: 70px 280px 70px 150px;
+}
+
+.quote__text h1{
+	font-size: 50px;
+	color: #464F41;
+}
+
+.quote__suptitle{
+	text-transform: uppercase;
+	color: lightgrey;
+}
+
+.footer{
+	background-color: #464F41;
+	color: #fff;
+	padding-top: 300px;
+}
+
+.contacts{
+	margin-right: 100px;
+}
+
+.footer__contacts{
+	display: flex;
+	/*margin-bottom: 50px;*/
+}
+
+.footer__contacts.plus{
+	/*display: flex;*/
+	justify-content: space-around;
+	margin-top: 70px;
+}
+
+.footer__info{
+	margin-right: 100px;
+}
+
+.footer__info-title{
+	margin-bottom: 21px;
+	font-size: 16px;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+
+.footer__link{
+	color: #fff;
+	text-decoration: none;
+}
+
+.footer__item{
+	list-style-type: none;
+	margin-bottom: 21px;
+	font-size: 15px;
+	color: grey;
+	margin-left: -40px;
+}
+
+/*.line:last-child{
+	content: "";
+	display: block;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	height: 250px;
+	border-right: 2px solid gray;
+}*/
+
+.line{
+	width: 2px;
+	height: 250px;
+	background-color: grey;
+	margin-right: 150px;
+}
+
+.media{
+	display: flex;
+}
+
+.icon__img:hover{
+	background-color: yellow;
+	border-radius: 50%;
+}
+
+
+
+
+
+
+
+
